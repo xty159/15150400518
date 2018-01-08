@@ -2,7 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>dzy</title>
+        <link rel="stylesheet" href="css/boostrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+        <div class="navbar navbar-default">
+       <div class="container">
+        <div class="navbar-header">
+        
+            
+        </div>
+           <label id="toggle-label" class="visible-xs-inline-block" for="toggle-checkbox">MENU</label>
+         <input class="hidden" id="toggle-checkbox" type="checkbox">
+          <div class="hidden-xs">
+           <ul class="nav navbar-nav">
+               <li class="active"><h2>图书管理系统</h2></li>
+           
+           </ul>
+           <ul class="nav navbar-nav navbar-right">
+               <li><a href="signup.html">登录</a></li>
+                <li><a href="signup.html">注册</a></li>  
+           </ul>
+        </div>
+        </div>
+    </div>
 <script language="javascript" type="text/javascript">
 
 // 增加成员函数
@@ -69,7 +92,8 @@ row.appendChild(cell);
 
 var cell = document.createElement("td");
 
-cell.appendChild(document.createTextNode(document.getElementById("bkyear").value));
+cell.appendChild(document.createTextNode(document.getElementById("bkyer").value));
+
 
 row.appendChild(cell);
 
@@ -129,7 +153,7 @@ sortList.removeChild(delRow);
 
 <body >
 
-<p align="center" class="Title ">图书管理平台</p>
+
 
 <table width="95%" align="center" cellpadding="5" cellspacing="1" >
 
@@ -137,11 +161,11 @@ sortList.removeChild(delRow);
 
 t=50>
 
-<td ><a name="000">图书入库</a></td>
+<td ><a name="000">添加图书信息</a></td>
 
 </tr>
 
-<tr height=50>
+<tr height=150>
 
 <td ><table width="100%" border="0">
 
@@ -155,7 +179,7 @@ size="30"/></td>
 
 <th width="9%">书代号：</th>
 
-<td colspan="2"><input name="bknum" type="text" id="bknum"
+<td colspan="1"><input name="bknum" type="text" id="bknum"
 
 size="30"/></td>
 
@@ -163,7 +187,7 @@ size="30"/></td>
 
 <tr>
 
-<th height="26">书名：</th>
+<th height="50">书名：</th>
 
 <td height="26" colspan="3"><input name="bkname" type="text"
 
@@ -179,29 +203,24 @@ id="bkauthor" size="30"/></td>
 
 <tr>
 
-<th height="26">定价：</th>
+<th height="30">定价：</th>
 
 <td width="27%" height="26"><input name="bkprice" type="text"
 
-id="bkprice" size="10" /></td>
+id="bkprice" size="30" /></td>
 
-<th width="6%">年份：</th>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<th height="30">   年份：</th>
 
-<td width="19%"><input name="bkyear" type="text" id="bkyear" size="10"
+<td height="26" colspan="2"><input name="bkauthor" type="text"
 
-/></td>
-
-<th height="26" colspan="2">ISBN：</th>
-
-<td width="30%"><input name="bkisbn" type="text" id="bkisbn"
-
-size="30"/></td>
+id="bkauthor" size="30"/></td>
 
 </tr>
 
 <tr>
 
-<td height="26" colspan="7" align="center">
+<td height="70" colspan="" align="center">
 <input type="submit"
 
        name="button" id="button" value="添加" onClick="addSort();"></td>
@@ -220,7 +239,7 @@ size="30"/></td>
 
 <tr valign="bottom">
 
-<td colspan="7" ><a name="003">现存图书列表</a></td>
+<td colspan="7" ><a name="003">现有图书列表</a></td>
 
 </tr>
 
@@ -238,7 +257,6 @@ size="30"/></td>
 
 <th width="40">年份</th>
 
-<th>ISBN</th>
 
 </tr>
 
